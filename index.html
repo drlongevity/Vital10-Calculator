@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital10 Score Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vital10 Score Calculator</h1>
+        <p>Evaluate your metabolic and cardiovascular health with our Vital10 Score.</p>
+    </header>
+    <main>
+        <form id="score-form">
+            <h2>Input Metrics</h2>
+
+            <!-- DEXA Metrics -->
+            <label for="lean-body-mass">Lean Body Mass (%):</label>
+            <input type="number" id="lean-body-mass" name="lean-body-mass" step="0.1" required>
+
+            <label for="ag-ratio">A/G Ratio (Visceral Fat):</label>
+            <input type="number" id="ag-ratio" name="ag-ratio" step="0.1" required>
+
+            <!-- VO2 Max -->
+            <h3>VO2 Max Section</h3>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="30" max="59" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+
+            <label for="vo2-max">VO2 Max (mL/kg/min):</label>
+            <input type="number" id="vo2-max" name="vo2-max" step="0.1" required>
+
+            <!-- Metabolic Metrics -->
+            <label for="waist-circumference">Waist Circumference (inches):</label>
+            <input type="number" id="waist-circumference" name="waist-circumference" step="0.1" required>
+
+            <label for="a1c">Hemoglobin A1C (%):</label>
+            <input type="number" id="a1c" name="a1c" step="0.1" required>
+
+            <label for="triglycerides">Triglycerides (mg/dL):</label>
+            <input type="number" id="triglycerides" name="triglycerides" step="1" required>
+
+            <label for="systolic">Systolic Blood Pressure (mmHg):</label>
+            <input type="number" id="systolic" name="systolic" step="1" required>
+
+            <label for="diastolic">Diastolic Blood Pressure (mmHg):</label>
+            <input type="number" id="diastolic" name="diastolic" step="1" required>
+
+            <label for="apob">ApoB (mg/dL):</label>
+            <input type="number" id="apob" name="apob" step="1" required>
+
+            <button type="button" onclick="calculateScore()">Calculate Score</button>
+        </form>
+        <section id="result"></section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
